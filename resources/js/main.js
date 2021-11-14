@@ -3,7 +3,10 @@ window.myApp = {
     showInfo: async () => {
         try {
             console.log('Getting directory contents..');
-            const results = await Neutralino.filesystem.readDirectory('C:/test');
+            
+            // Change the target path
+            const results = await Neutralino.filesystem.readDirectory('path/to/testFile');
+            
             console.log('Got directory contents!');
             console.log(results);
         } catch (error) {
